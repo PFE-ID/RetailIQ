@@ -134,7 +134,7 @@ def get_model():
 
 @st.cache_data
 def get_default_data():
-    return load_data("data/cleaned_data.csv")
+    return load_data("PFE/data/cleaned_data.csv")
 
 if "df" not in st.session_state:
     st.session_state.df = get_default_data()
