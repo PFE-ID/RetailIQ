@@ -130,11 +130,11 @@ C = dict(blue="#1e88e5", lblue="#42a5f5", green="#66bb6a",
 # ── SESSION STATE & CACHE ─────────────────────────────────────────────────────
 @st.cache_resource
 def get_model():
-    return load_model("models/model_gbr_sales.pkl","models/encoders.pkl")
+    return load_model("model_gbr_sales.pkl","encoders.pkl")
 
 @st.cache_data
 def get_default_data():
-    return load_data("data/cleaned_data.csv")
+    return load_data("cleaned_data.csv")
 
 if "df" not in st.session_state:
     st.session_state.df = get_default_data()
